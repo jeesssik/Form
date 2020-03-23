@@ -21,80 +21,86 @@
 		<h1 class="text-center " id="titulo">Formulario de Inscripción</h1>
 	</header>
 
-	<section>
 
-		<div class="container NA">
-			<div class="row ">
+
+
+		<form>
+
+			<div class="form-row imput">
 			  
-				<div class="col-lg-6 col-sm-12 ">
+				<div class=" form-group col-lg-6 col-sm-12 "><label for="nombre">Nombre</label>
 				  <div class="input-group mb-3">
+				  	
 					  <div class="input-group-prepend">
 					    <span class="input-group-text" id="basic-addon1">👤</span>
 					  </div>
-					  <input type="text" class="form-control" placeholder="ingrese su nombre" aria-label="nombre" aria-describedby="basic-addon1">
+					  <input type="text" class="form-control" placeholder="ingrese su nombre" id="nombre" >
 				  </div>
 				</div>
 
 				<div class="col-lg-6 col-sm-12">
-
+					<label for="apellido">Apellido</label>
 				   <div class="input-group mb-3">
 					  <div class="input-group-prepend">
 					    <span class="input-group-text" id="basic-addon1">👤</span>
 					  </div>
-					  <input type="text" class="form-control" placeholder="ingrese su apellido" aria-label="apellido" aria-describedby="basic-addon1">
+					  <input type="text" class="form-control" placeholder="ingrese su apellido"  id="apellido">
 				  </div>
 				</div>
 			</div>
-		</div>
 
-
-
-			 <div class="input-group mb-3 imput">
+			<div class="input-group mb-3 imput">
 
 			  <div class="input-group-prepend">
 			    <span class="input-group-text" id="basic-addon1">🆔</span>
 			  </div>
-			  <input type="text" class="form-control" placeholder="Ingresesu DNI" aria-label="dni" aria-describedby="basic-addon1">
+			  <input type="text" class="form-control" placeholder="Ingresesu DNI" aria-label="dni" aria-describedby="basic-addon1" id="dni">
+		    </div>
+
+
+		  	<div class="form-group imput">
+		    	<label for="Select1">Provincia</label>
+			    <select class="form-control" id="Select1">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+		    </div>
+
+
+			  <div class="form-group imput selector1">
+			    <label for="Select2">Localidad</label>
+			    <select class="form-control" id="Select2">
+			      <option>1</option>
+			      <option>2</option>
+			      <option>3</option>
+			      <option>4</option>
+			      <option>5</option>
+			    </select>
+			  </div>
+
+		  <div class="form-group imput selector2">
+		    <label for="Select3">Localidad</label>
+		    <select class="form-control" id="Select3">
+		      <option>1</option>
+		      <option>2</option>
+		      <option>3</option>
+		      <option>4</option>
+		      <option>5</option>
+		    </select>
 		  </div>
+
+
 
 
 		   <div class="input-group mb-3 imput">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" id="basic-addon1">🗺️</span>
-			  </div>
-			  <input type="text" class="form-control" placeholder="Ingrese su provincia" aria-label="provincia" aria-describedby="basic-addon1">
-		  </div>
 
-
-
-
-		  <div class="form-group imput selector1">
-		    <label for="Select">Localidad</label>
-		    <select class="form-control" id="Select">
-		      <option>1</option>
-		      <option>2</option>
-		      <option>3</option>
-		      <option>4</option>
-		      <option>5</option>
-		    </select>
-		  </div>
-
-		  <div class="form-group imput selector2">
-		    <label for="Select">Localidad</label>
-		    <select class="form-control" id="Select">
-		      <option>1</option>
-		      <option>2</option>
-		      <option>3</option>
-		      <option>4</option>
-		      <option>5</option>
-		    </select>
-		  </div>
-
-		  <div class="input-group mb-3 imput">
 			  <div class="input-group-prepend">
 			    <span class="input-group-text" id="basic-addon1">📧</span>
 			  </div>
-			  <input type="text" class="form-control" placeholder="Ingrese su E-mail" aria-label="mail" aria-describedby="basic-addon1">
+			  <input type="email" placeholder="Ingrese su E-mail" class="form-control" id="Email">
 		  </div>
 
 
@@ -105,27 +111,59 @@
 			  <div class="input-group-prepend">
 			    <span class="input-group-text" id="basic-addon1">☎️</span>
 			  </div>
-			  <input type="text" class="form-control" placeholder="Ingrese su DNI" aria-label="DNI" aria-describedby="basic-addon1">
+			  <input type="text" class="form-control" placeholder="Ingrese su telefono" aria-label="DNI" aria-describedby="basic-addon1" id="tel">
 		  </div>
 
 
-		 
+		  <div class="form-group imput">
+		    <div class="form-check">
+		      <input class="form-check-input" type="checkbox" id="gridCheck">
+		      <label class="form-check-label" for="gridCheck">
+		        Acepto <a data-toggle="modal" data-target="#exampleModal" id="Bterminos"> Terminos y Condiciones</a>
+		      </label>
+		    </div>
+		  </div>
+
+	
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <h4 class="modal-title" id="ModalLabel">Terminos y Condiciones</h4>
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		          <span aria-hidden="true">&times;</span>
+		        </button>
+		      </div>
+		      <div class="modal-body" id="Terminos">
+		        <p >
+		        	El registro y uso de los Servicios Digitales por parte de un usuario (en adelante el/los “Usuario/s”) indica la aceptación absoluta de los presentes Términos y Condiciones y de la Política de Privacidad.
+		        </p>
+		        <p>
+					El acceso a los Servicios Digitales es libre y gratuito. El Usuario garantiza y declara ser mayor de 18 años, y/o en su caso, que tiene la expresa autorización de sus padres o de sus tutores para poder acceder al sitio web y que es competente para entender y aceptar sin reservas las obligaciones, afirmaciones, representaciones y garantías establecidas en estos Términos y Condiciones. Por su parte, el Estado Nacional, en adelante “el Administrador”, deslinda su responsabilidad en el caso de no ser veraz la información suministrada al respecto.
+		        </p>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+		        
+		      </div>
+		    </div>
+		  </div>
+		</div> 
+
+			
 
 
-
-
-
-		 <div class="text-center" id="boton"> 
-		  <button type="button" class="btn btn-info" id="boton">Enviar Registro</button>
-		 </div>
-
-	</section>
+		  <div class="text-center">
+		  	<button type="submit" class="btn btn-primary" onclick="chequear()">Enviar Registro</button>
+		  </div>
+		</form>
 
 
 </div>
-
-
-
+<script type="text/javascript" src="JS/comp.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script type="text/javascript" src="JS/bootstrap.js"></script>
 
 
 </body>

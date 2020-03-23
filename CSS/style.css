@@ -20,7 +20,7 @@ body{
 	border-radius: 45px;
 }
 
-.imput, .NA{
+.imput{
 	width:80%;
 	margin: 20px auto 0 auto;
 }
@@ -33,10 +33,22 @@ body{
 }
 
 
-
+#ModalLabel{
+	color: black;
+	font-weight: bold;
+}
+#Bterminos{
+	color: lightblue;
+	cursor: pointer;
+}
+#Terminos{
+	color: black;
+}
 
 #boton{
 	margin-bottom: 5%;
 }
+
+
 
 
