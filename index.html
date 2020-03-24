@@ -11,6 +11,13 @@
 	<link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="CSS/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/intlTelInput.css">
+	
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+	<script src="JS/intlTelInput-jquery.min.js"></script>
+	<script src="JS/utils.js"></script>
+
 </head>
 <body>
 
@@ -61,11 +68,30 @@
 		  	<div class="form-group imput">
 		    	<label for="Select1">Provincia</label>
 			    <select class="form-control" id="Select1">
-			      <option>1</option>
-			      <option>2</option>
-			      <option>3</option>
-			      <option>4</option>
-			      <option>5</option>
+			    	  <option value="null">Seleccione...</option>
+			          <option value="Buenos Aires">Bs. As.</option>
+			          <option value="Catamarca">Catamarca</option>
+			          <option value="Chaco">Chaco</option>
+			          <option value="Chubut">Chubut</option>
+			          <option value="Cordoba">Cordoba</option>
+			          <option value="Corrientes">Corrientes</option>
+			          <option value="Entre Rios">Entre Rios</option>
+			          <option value="Formosa">Formosa</option>
+			          <option value="Jujuy">Jujuy</option>
+			          <option value="La Pampa">La Pampa</option>
+			          <option value="La Rioja">La Rioja</option>
+			          <option value="Mendoza">Mendoza</option>
+			          <option value="Misiones">Misiones</option>
+			          <option value="Neuquen">Neuquen</option>
+			          <option value="Rio Negro">Rio Negro</option>
+			          <option value="Salta">Salta</option>
+			          <option value="San Juan">San Juan</option>
+			          <option value="San Luis">San Luis</option>
+			          <option value="Santa Cruz">Santa Cruz</option>
+			          <option value="Santa Fe">Santa Fe</option>
+			          <option value="Sgo. del Estero">Sgo. del Estero</option>
+			          <option value="Tierra del Fuego">Tierra del Fuego</option>
+			          <option value="Tucuman">Tucuman</option>
 			    </select>
 		    </div>
 
@@ -107,11 +133,9 @@
 
 
 
-		  <div class="input-group mb-3 imput">
-			  <div class="input-group-prepend">
-			    <span class="input-group-text" id="basic-addon1">☎️</span>
-			  </div>
-			  <input type="text" class="form-control" placeholder="Ingrese su telefono" aria-label="DNI" aria-describedby="basic-addon1" id="tel">
+		  <div class="input-group mb-3 tel imput">
+			  <input type="tel" class="form-control " placeholder="Ingrese su telefono" aria-label="DNI" aria-describedby="basic-addon1" id="phone">
+			 
 		  </div>
 
 
@@ -160,11 +184,24 @@
 
 
 </div>
-<script type="text/javascript" src="JS/comp.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script type="text/javascript" src="JS/bootstrap.js"></script>
+
+	<script type="text/javascript" src="JS/comp.js"></script>
+
+	<script src="JS/intlTelInput.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="JS/bootstrap.js"></script>
+
+	<script>
+		var input = document.querySelector("#phone");
+
+		window.intlTelInput(input,({
+
+		}));
 
 
+
+
+	</script>
 </body>
 </html>
