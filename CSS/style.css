@@ -28,7 +28,7 @@ body{
 
 
 
-.selector1, .selector2{
+#selector2, #selector3{
 	display: none;
 }
 
@@ -53,4 +53,7 @@ body{
 	color: black;
 }
 
-
+#btn{
+	margin-top: 5%;
+	margin-bottom: 3%;
+}

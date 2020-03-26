@@ -62,27 +62,28 @@
 			    <!--dni-->
 
 
-
-			    <div class="input-group mb-3 imput">
-
-				  <div class="input-group-prepend">
-				    <span class="input-group-text" id="basic-addon1">🆔</span>
-				  </div>
-				  <input type="text" class="form-control" id="dni" placeholder="Ingrese DNI"  required>
-				  	<div class="invalid-feedback">
-			          Por favor ingrese un dni.
-			        </div>
-			    </div>
-
+			    <div class="imput">
+					<label for="email">DNI</label>
+				    <div class="input-group mb-3">
+					  <div class="input-group-prepend">
+					    <span class="input-group-text" id="basic-addon1">🆔</span>
+					  </div>
+					  <input type="text" class="form-control" id="dni" placeholder="Ingrese DNI"   pattern="\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"  required>
+					  	<div class="invalid-feedback">
+				          Por favor ingrese un dni.
+				        </div>
+				    </div>
+				</div>
 
 			    <!-- selector provincia-->
-			    <div class="form-row imput">
-				    <div  class="form-group col-lg-6 col-sm-12">
+			    <div class="imput">
+				    <div  class="form-group col-12">
 					    <div class="mb-3 md-form">
 					      <label for="Select1">Provincia</label>
-			    			<select class="form-control " id="Select1" required>
+			    			<select class="form-control " id="Select1" required  onchange="corroborar()">
 						     <option value="">Seleccione...</option>
-					          <option value="1">Bs. As.</option>
+					          <option value="1">Buenos Aires</option>
+					          <option value="24">CABA</option>
 					          <option value="2">Catamarca</option>
 					          <option value="3">Chaco</option>
 					          <option value="4">Chubut</option>
@@ -106,32 +107,49 @@
 					          <option value="22">Tierra del Fuego</option>
 					          <option value="23">Tucuman</option>
 					      </select>
-					      <div class="invalid-feedback">Please select a country.</div>
+					      <div class="invalid-feedback">Por favor elija una provincia</div>
 					    </div>
 					</div>
 
-					<div  class="form-group col-lg-6 col-sm-12">
-					  <div class="form-group imput selector1">
-								    <label for="Select2">Localidad</label>
-								    <select class="form-control" id="Select2">
-								      <option>1</option>
-								      <option>2</option>
-								      <option>3</option>
-								      <option>4</option>
-								      <option>5</option>
+					<div  class="form-group col-12">
+					  <div class="form-group " id="selector2">
+								    <label for="Select2">Barrio</label>
+								    <select class="form-control" id="Select2"  required>
+								    	 <option value="">Seleccione...</option>
+								    	 <option value="1">Agronomia</option>
+										 <option value="2">Villa Urquiza</option>
+										 <option value="3">Barracas</option>
+										 <option value="4">Chacarita</option>
+										 <option value="5">Caballito</option>
+										 <option value="6">Flores</option>
+										 <option value="7">Floresta</option>
+										
 								    </select>
+								     <div class="invalid-feedback">Por favor elija una localidad</div>
 					  </div>
 					</div>
-					<div  class="form-group col-lg-6 col-sm-12">
-				      <div class="form-group imput selector2">
-							    <label for="Select3">Localidad</label>
-							    <select class="form-control" id="Select3">
-							      <option>1</option>
-							      <option>2</option>
-							      <option>3</option>
-							      <option>4</option>
-							      <option>5</option>
-							    </select>
+
+
+					<div  class="form-group col-12">
+					  <div class="form-group " id="selector3">
+								    <label for="Select2">Localidad</label>
+								    <select class="form-control" id="Select3"  required>
+								    	 <option value="">Seleccione...</option>
+								    	 <option value="1">ADOLFO ALSINA</option>
+										 <option value="2">ADOLFO GONZALES CHAVES</option>
+										 <option value="3">ADROGUE</option>
+										 <option value="4">ALBERTI</option>
+										 <option value="5">ALEJANDRO KORN</option>
+										 <option value="6">ALMIRANTE BROWN</option>
+										 <option value="7">AMEGHINO</option>
+										 <option value="8">AMERICA</option>
+										 <option value="9">ARRECIFES</option>
+										 <option value="10">AVELLANEDA</option>
+										 <option value="11">AYACUCHO</option>
+										 <option value="12">AZUL</option>
+										 <option value="12">BAHIA BLANCA</option>
+								    </select>
+								     <div class="invalid-feedback">Por favor elija una localidad</div>
 					  </div>
 					</div>
 				</div>
@@ -139,33 +157,38 @@
 
 
 				<!-- selector mail-->
-				<div class="input-group mb-3 imput">
 
-					  <div class="input-group-prepend">
-					    <span class="input-group-text" id="basic-addon1">📧</span>
-					  </div>
-					   <input type="email" name="email" placeholder="Ingrese su email" class="email white  form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-	          
-			          <div class="invalid-feedback feedback-pos">
-			            Por favoor ingrese un email valido
-			          </div>
-			    </div>
-
+				<div class="imput">
+					<label for="email">E-mail</label>
+					<div class="input-group mb-3">
+						  <div class="input-group-prepend">
+						    <span class="input-group-text" id="basic-addon1">📧</span>
+						  </div>
+						   <input type="email" name="email" placeholder="Ingrese su email" class="email white  form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+		          
+				          <div class="invalid-feedback feedback-pos">
+				            Por favoor ingrese un email valido
+				          </div>
+				    </div>
+				</div>
 			    <!--ingreso telefono-->
 
-			    <div class="input-group mb-3 imput">
+			    
+			    <div class="imput">
+					<label for="email">Telefono</label>
+				    <div class="input-group mb-3">
 
-					  <div class="input-group-prepend">
-					    <span class="input-group-text" id="basic-addon1">📞</span>
-					  </div>
-					   <input type="email" name="email" placeholder="ej.: +51(11)3051-7512" class="email white  form-control" id="tel" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}" required>
-	          
-			          <div class="invalid-feedback feedback-pos">
-			            Por favoor ingrese un telefono valido
-			          </div>
-			    </div>
+						  <div class="input-group-prepend">
+						    <span class="input-group-text" id="basic-addon1">📞</span>
+						  </div>
+						   <input type="tel" name="tel" placeholder="ej.: +51(11)3051-7512" class="email white  form-control" id="tel" pattern="[\+]\d{2}[\(]\d{2}[\)]\d{4}[\-]\d{4}"  required>
+		          
+				          <div class="invalid-feedback feedback-pos">
+				            Por favoor ingrese un telefono valido
+				          </div>
+				    </div>
 
-
+				</div>
 
 			  <div class="text-center">
 			    <div class="form-check">
@@ -206,7 +229,7 @@
 
 
 			<div class="text-center">
-			  <button class="btn btn-primary" type="submit">Submit form</button>
+			  <button class="btn btn-primary" type="submit" id="btn">Submit form</button>
 			</div>
 
 			</form>
@@ -254,7 +277,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="JS/bootstrap.js"></script>
 
-
+		<script type="text/javascript" src="JS/comp.js"></script>
 
 
 
