@@ -1,10 +1,10 @@
-let nombre= document.querySelector("#nombre");
-let apellido= document.querySelector("#apellido");
-let mail= document.querySelector("#Email");
-let dni= document.querySelector("#dni");
-let tel= document.querySelector("#tel");
+let nombre= document.getElementById("nombre");
+let apellido= document.getElementById("apellido");
+let mail= document.getElementById("Email");
+let dni= document.getElementById("dni");
+let tel= document.getElementById("phone");
 
-
+let cod= document.getElementById(Select1)
 
 
 
